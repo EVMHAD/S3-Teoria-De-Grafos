@@ -1,6 +1,7 @@
 import json # for file IO
 import networkx as nx # for the graphs
-from random import randint # for pseudorandomness
+from random import randint # pseudo-randomness
+from celluloid import Camera # creating animations
 import matplotlib.pyplot as plt # for the drawings
 from networkx.readwrite import json_graph # for output
 
@@ -16,19 +17,37 @@ while len(G.edges) < m: # add edges until the goal size is reached
     if v != u: # if they differ, add it
         G.add_edge(v, u) # unit weight by default
 
+# set some options for the drawing
+opt = { 'node_color': 'green',
+        'node_size': 500,
+        'width': 3,
+        'with_labels': True }
+nx.draw(G, **opt) # create the drawing
+plt.show() # open a window with it
+plt.savefig('graph.png') # export it as an image file
+        
 output =  json_graph.node_link_data(G)
 with open('graph.json', 'w') as target:
     json.dump(output, target) # write to file
 
 with open('graph.json') as source:
     data = json.load(source) # read it back
-stored = json_graph.node_link_graph(data) 
+G = json_graph.node_link_graph(data) # overwrite
 
-# set some options for the drawing
-opt = { 'node_color': 'green',
-        'node_size': 500,
+fig = plt.figure() # make a new figure to animate
+cam = Camera(fig) # for storing the frames
+opt = { 'node_size': 500,
         'width': 3,
         'with_labels': True }
-nx.draw(stored, **opt) # create the drawing
-plt.show() # open a window with it
-plt.savefig('graph.png') # export it as an image file
+coords = nx.spring_layout(G) # fix the positionspython 
+palette = ['green'] * n # make all green
+for v in range(n):
+    palette[v] = 'yellow' # highlight in yellow
+    nx.draw(G, pos = coords, node_color = palette,  **opt)
+    cam.snap() # take a snapshot
+    palette[v] = 'gray' # make the 'used' ones blue
+nx.draw(G, pos = coords, node_color = palette,  **opt)
+cam.snap() # last frame all gray
+gif = cam.animate(interval = 500, # milliseconds between frames
+                  repeat = False) # do NOT loop (this is actually bugged)
+gif.save('graph.gif', writer = 'imagemagick')
