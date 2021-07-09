@@ -29,3 +29,14 @@ explica su uso); se puede usar como _back-end_ con la opción
 [ImageMagick](https://imagemagick.org/index.php) que se instala
 aparte.
 
+## Segunda sesión
+
+No necesitamos nuevos paquetes; estaremos analizando propiedades
+estructurales en NetworkX y actualizando las visualizaciones acorde.
+
+## Tercera sesión
+
+Se
+necesita
+[el estilo `tikz-network`](https://github.com/hackl/tikz-network) para
+LaTeX.

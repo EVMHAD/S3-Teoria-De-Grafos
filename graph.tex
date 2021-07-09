@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{tikz-network}
+\definecolor{c0}{rgb}{0.5, 0.5, 0.5}
+\definecolor{c1}{rgb}{0.5, 0.67, 0.5}
+\definecolor{c2}{rgb}{0.5, 0.83, 0.5}
+\definecolor{c3}{rgb}{0.5, 1.0, 0.5}
+\definecolor{c4}{rgb}{0.5, 1.2, 0.5}
+\definecolor{c5}{rgb}{0.5, 1.3, 0.5}
+\definecolor{c6}{rgb}{0.5, 1.5, 0.5}
+\definecolor{c7}{rgb}{0.5, 1.7, 0.5}
+\definecolor{c8}{rgb}{0.5, 1.8, 0.5}
+\definecolor{c9}{rgb}{0.5, 2.0, 0.5}
+\definecolor{c10}{rgb}{0.5, 2.2, 0.5}
+\definecolor{c11}{rgb}{0.5, 2.3, 0.5}
+\definecolor{c12}{rgb}{0.5, 2.5, 0.5}
+\begin{document}
+\begin{tikzpicture}
+\clip (0,0) rectangle (6,6);
+\Vertex[x=4.962,y=0.521,color=c8,opacity=0.9,label=1]{1}
+\Vertex[x=3.079,y=0.350,color=c0,opacity=0.9,label=2]{2}
+\Vertex[x=3.260,y=3.880,color=c12,opacity=0.9,label=3]{3}
+\Vertex[x=4.080,y=1.953,color=c2,opacity=0.9,label=4]{4}
+\Vertex[x=4.162,y=0.355,color=c8,opacity=0.9,label=5]{5}
+\Vertex[x=2.698,y=2.177,color=c2,opacity=0.9,label=6]{6}
+\Vertex[x=1.038,y=5.650,color=c5,opacity=0.9,label=7]{7}
+\Edge[,bend=-16.699](1)(6)
+\Edge[,bend=-16.699](1)(7)
+\Edge[,bend=-16.699](1)(5)
+\Edge[,bend=-16.699](1)(3)
+\Edge[,bend=-16.699](1)(2)
+\Edge[,bend=-16.699](2)(3)
+\Edge[,bend=-16.699](3)(7)
+\Edge[,bend=-16.699](3)(6)
+\Edge[,bend=-16.699](3)(4)
+\Edge[,bend=-16.699](3)(5)
+\Edge[,bend=-16.699](4)(7)
+\Edge[,bend=-16.699](4)(5)
+\Edge[,bend=-16.699](5)(7)
+\Edge[,bend=-16.699](5)(6)
+\end{tikzpicture}
+\end{document}

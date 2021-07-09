@@ -39,7 +39,7 @@ cam = Camera(fig) # for storing the frames
 opt = { 'node_size': 500,
         'width': 3,
         'with_labels': True }
-coords = nx.spring_layout(G) # fix the positionspython 
+coords = nx.spring_layout(G) # fix the positions
 palette = ['green'] * n # make all green
 for v in range(n):
     palette[v] = 'yellow' # highlight in yellow
