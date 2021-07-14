@@ -26,6 +26,7 @@ coords = nx.spring_layout(G) # fix the positions
 nx.draw(G, pos = coords, **opt) # create a drawing
 plt.savefig('graph.png') # export it as an image file
 plt.show() # open a window with it
+plt.close()
 
         
 output =  json_graph.node_link_data(G)
@@ -51,4 +52,4 @@ nx.draw(G, pos = coords, node_color = palette,  **opt)
 cam.snap() # last frame all gray
 gif = cam.animate(interval = 500, # milliseconds between frames
                   repeat = False) # do NOT loop (this is actually bugged)
-gif.save('graph.gif', writer = 'imagemagick')
+gif.save('tmp.gif', writer = 'imagemagick')
