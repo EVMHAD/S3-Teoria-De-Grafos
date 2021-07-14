@@ -22,9 +22,11 @@ opt = { 'node_color': 'green',
         'node_size': 500,
         'width': 3,
         'with_labels': True }
-nx.draw(G, **opt) # create the drawing
-plt.show() # open a window with it
+coords = nx.spring_layout(G) # fix the positions
+nx.draw(G, pos = coords, **opt) # create a drawing
 plt.savefig('graph.png') # export it as an image file
+plt.show() # open a window with it
+
         
 output =  json_graph.node_link_data(G)
 with open('graph.json', 'w') as target:
@@ -39,7 +41,6 @@ cam = Camera(fig) # for storing the frames
 opt = { 'node_size': 500,
         'width': 3,
         'with_labels': True }
-coords = nx.spring_layout(G) # fix the positions
 palette = ['green'] * n # make all green
 for v in range(n):
     palette[v] = 'yellow' # highlight in yellow
