@@ -1,25 +1,35 @@
-import json 
 import networkx as nx
 from math import log, floor 
 from network2tikz import plot
-from networkx.readwrite import json_graph 
+from networkx.generators.classic import binomial_tree
 
-levels = 256
+levels = 50
 colors = dict()
 for v in range(levels + 1):
+    high = 0.6
+    low = 0.1
+    active = v / (2 * levels)
     label = 'c' + str(v)
     start = '\\definecolor{' + label + '}{rgb}'
-    end = '{0.8, ' + f'{0.5 + v / (2 * levels):.2}' + ', 0.2}' 
+    if v % 3 == 0:
+        end = '{' + f'{high:.2}' + ',' + f'{active:.2}' + ',' + f'{low:.2}' + '}'
+    elif v % 3 == 1:
+        end = '{' f'{active:.2}' + ',' + f'{low:.2}' + ',' + f'{high:.2}' + '}'        
+    else:
+        end = '{' + f'{low:.2}' + ', ' + f'{high:.2}' + ',' + f'{active:.2}' + '}'        
     colors[v] = start + end
-
+    
 def label(value):
     global levels
     return f'c{int(floor(value * levels))}'
 
-with open('graph.json') as source:
-    data = json.load(source) 
-G = json_graph.node_link_graph(data) 
-coords = nx.kamada_kawai_layout(G, scale = 3) # another layout
+
+G = binomial_tree(4)
+import pydot
+from networkx.drawing.nx_pydot import graphviz_layout
+
+# hay que instalar graphviz
+coords = graphviz_layout(G, prog = "dot") 
 
 rank = nx.pagerank(G) 
 low = min(rank.values())
