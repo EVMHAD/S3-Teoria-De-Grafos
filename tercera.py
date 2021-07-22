@@ -9,7 +9,7 @@ colors = dict()
 for v in range(levels + 1):
     label = 'c' + str(v)
     start = '\\definecolor{' + label + '}{rgb}'
-    end = '{0.5, ' + f'{0.5 + v / (levels / 2):.2}' + ', 0.5}' 
+    end = '{0.5, ' + f'{0.5 + v / (2 * levels):.2}' + ', 0.5}' 
     colors[v] = start + end
 
 def label(value):
