@@ -1,41 +1,306 @@
 \documentclass{standalone}
 \usepackage{tikz-network}
-\definecolor{c0}{rgb}{0.5, 0.5, 0.5}
-\definecolor{c1}{rgb}{0.5, 0.67, 0.5}
-\definecolor{c2}{rgb}{0.5, 0.83, 0.5}
-\definecolor{c3}{rgb}{0.5, 1.0, 0.5}
-\definecolor{c4}{rgb}{0.5, 1.2, 0.5}
-\definecolor{c5}{rgb}{0.5, 1.3, 0.5}
-\definecolor{c6}{rgb}{0.5, 1.5, 0.5}
-\definecolor{c7}{rgb}{0.5, 1.7, 0.5}
-\definecolor{c8}{rgb}{0.5, 1.8, 0.5}
-\definecolor{c9}{rgb}{0.5, 2.0, 0.5}
-\definecolor{c10}{rgb}{0.5, 2.2, 0.5}
-\definecolor{c11}{rgb}{0.5, 2.3, 0.5}
-\definecolor{c12}{rgb}{0.5, 2.5, 0.5}
+\definecolor{c0}{rgb}{0.8, 0.5, 0.2}
+\definecolor{c1}{rgb}{0.8, 0.5, 0.2}
+\definecolor{c2}{rgb}{0.8, 0.5, 0.2}
+\definecolor{c3}{rgb}{0.8, 0.51, 0.2}
+\definecolor{c4}{rgb}{0.8, 0.51, 0.2}
+\definecolor{c5}{rgb}{0.8, 0.51, 0.2}
+\definecolor{c6}{rgb}{0.8, 0.51, 0.2}
+\definecolor{c7}{rgb}{0.8, 0.51, 0.2}
+\definecolor{c8}{rgb}{0.8, 0.52, 0.2}
+\definecolor{c9}{rgb}{0.8, 0.52, 0.2}
+\definecolor{c10}{rgb}{0.8, 0.52, 0.2}
+\definecolor{c11}{rgb}{0.8, 0.52, 0.2}
+\definecolor{c12}{rgb}{0.8, 0.52, 0.2}
+\definecolor{c13}{rgb}{0.8, 0.53, 0.2}
+\definecolor{c14}{rgb}{0.8, 0.53, 0.2}
+\definecolor{c15}{rgb}{0.8, 0.53, 0.2}
+\definecolor{c16}{rgb}{0.8, 0.53, 0.2}
+\definecolor{c17}{rgb}{0.8, 0.53, 0.2}
+\definecolor{c18}{rgb}{0.8, 0.54, 0.2}
+\definecolor{c19}{rgb}{0.8, 0.54, 0.2}
+\definecolor{c20}{rgb}{0.8, 0.54, 0.2}
+\definecolor{c21}{rgb}{0.8, 0.54, 0.2}
+\definecolor{c22}{rgb}{0.8, 0.54, 0.2}
+\definecolor{c23}{rgb}{0.8, 0.54, 0.2}
+\definecolor{c24}{rgb}{0.8, 0.55, 0.2}
+\definecolor{c25}{rgb}{0.8, 0.55, 0.2}
+\definecolor{c26}{rgb}{0.8, 0.55, 0.2}
+\definecolor{c27}{rgb}{0.8, 0.55, 0.2}
+\definecolor{c28}{rgb}{0.8, 0.55, 0.2}
+\definecolor{c29}{rgb}{0.8, 0.56, 0.2}
+\definecolor{c30}{rgb}{0.8, 0.56, 0.2}
+\definecolor{c31}{rgb}{0.8, 0.56, 0.2}
+\definecolor{c32}{rgb}{0.8, 0.56, 0.2}
+\definecolor{c33}{rgb}{0.8, 0.56, 0.2}
+\definecolor{c34}{rgb}{0.8, 0.57, 0.2}
+\definecolor{c35}{rgb}{0.8, 0.57, 0.2}
+\definecolor{c36}{rgb}{0.8, 0.57, 0.2}
+\definecolor{c37}{rgb}{0.8, 0.57, 0.2}
+\definecolor{c38}{rgb}{0.8, 0.57, 0.2}
+\definecolor{c39}{rgb}{0.8, 0.58, 0.2}
+\definecolor{c40}{rgb}{0.8, 0.58, 0.2}
+\definecolor{c41}{rgb}{0.8, 0.58, 0.2}
+\definecolor{c42}{rgb}{0.8, 0.58, 0.2}
+\definecolor{c43}{rgb}{0.8, 0.58, 0.2}
+\definecolor{c44}{rgb}{0.8, 0.59, 0.2}
+\definecolor{c45}{rgb}{0.8, 0.59, 0.2}
+\definecolor{c46}{rgb}{0.8, 0.59, 0.2}
+\definecolor{c47}{rgb}{0.8, 0.59, 0.2}
+\definecolor{c48}{rgb}{0.8, 0.59, 0.2}
+\definecolor{c49}{rgb}{0.8, 0.6, 0.2}
+\definecolor{c50}{rgb}{0.8, 0.6, 0.2}
+\definecolor{c51}{rgb}{0.8, 0.6, 0.2}
+\definecolor{c52}{rgb}{0.8, 0.6, 0.2}
+\definecolor{c53}{rgb}{0.8, 0.6, 0.2}
+\definecolor{c54}{rgb}{0.8, 0.61, 0.2}
+\definecolor{c55}{rgb}{0.8, 0.61, 0.2}
+\definecolor{c56}{rgb}{0.8, 0.61, 0.2}
+\definecolor{c57}{rgb}{0.8, 0.61, 0.2}
+\definecolor{c58}{rgb}{0.8, 0.61, 0.2}
+\definecolor{c59}{rgb}{0.8, 0.62, 0.2}
+\definecolor{c60}{rgb}{0.8, 0.62, 0.2}
+\definecolor{c61}{rgb}{0.8, 0.62, 0.2}
+\definecolor{c62}{rgb}{0.8, 0.62, 0.2}
+\definecolor{c63}{rgb}{0.8, 0.62, 0.2}
+\definecolor{c64}{rgb}{0.8, 0.62, 0.2}
+\definecolor{c65}{rgb}{0.8, 0.63, 0.2}
+\definecolor{c66}{rgb}{0.8, 0.63, 0.2}
+\definecolor{c67}{rgb}{0.8, 0.63, 0.2}
+\definecolor{c68}{rgb}{0.8, 0.63, 0.2}
+\definecolor{c69}{rgb}{0.8, 0.63, 0.2}
+\definecolor{c70}{rgb}{0.8, 0.64, 0.2}
+\definecolor{c71}{rgb}{0.8, 0.64, 0.2}
+\definecolor{c72}{rgb}{0.8, 0.64, 0.2}
+\definecolor{c73}{rgb}{0.8, 0.64, 0.2}
+\definecolor{c74}{rgb}{0.8, 0.64, 0.2}
+\definecolor{c75}{rgb}{0.8, 0.65, 0.2}
+\definecolor{c76}{rgb}{0.8, 0.65, 0.2}
+\definecolor{c77}{rgb}{0.8, 0.65, 0.2}
+\definecolor{c78}{rgb}{0.8, 0.65, 0.2}
+\definecolor{c79}{rgb}{0.8, 0.65, 0.2}
+\definecolor{c80}{rgb}{0.8, 0.66, 0.2}
+\definecolor{c81}{rgb}{0.8, 0.66, 0.2}
+\definecolor{c82}{rgb}{0.8, 0.66, 0.2}
+\definecolor{c83}{rgb}{0.8, 0.66, 0.2}
+\definecolor{c84}{rgb}{0.8, 0.66, 0.2}
+\definecolor{c85}{rgb}{0.8, 0.67, 0.2}
+\definecolor{c86}{rgb}{0.8, 0.67, 0.2}
+\definecolor{c87}{rgb}{0.8, 0.67, 0.2}
+\definecolor{c88}{rgb}{0.8, 0.67, 0.2}
+\definecolor{c89}{rgb}{0.8, 0.67, 0.2}
+\definecolor{c90}{rgb}{0.8, 0.68, 0.2}
+\definecolor{c91}{rgb}{0.8, 0.68, 0.2}
+\definecolor{c92}{rgb}{0.8, 0.68, 0.2}
+\definecolor{c93}{rgb}{0.8, 0.68, 0.2}
+\definecolor{c94}{rgb}{0.8, 0.68, 0.2}
+\definecolor{c95}{rgb}{0.8, 0.69, 0.2}
+\definecolor{c96}{rgb}{0.8, 0.69, 0.2}
+\definecolor{c97}{rgb}{0.8, 0.69, 0.2}
+\definecolor{c98}{rgb}{0.8, 0.69, 0.2}
+\definecolor{c99}{rgb}{0.8, 0.69, 0.2}
+\definecolor{c100}{rgb}{0.8, 0.7, 0.2}
+\definecolor{c101}{rgb}{0.8, 0.7, 0.2}
+\definecolor{c102}{rgb}{0.8, 0.7, 0.2}
+\definecolor{c103}{rgb}{0.8, 0.7, 0.2}
+\definecolor{c104}{rgb}{0.8, 0.7, 0.2}
+\definecolor{c105}{rgb}{0.8, 0.71, 0.2}
+\definecolor{c106}{rgb}{0.8, 0.71, 0.2}
+\definecolor{c107}{rgb}{0.8, 0.71, 0.2}
+\definecolor{c108}{rgb}{0.8, 0.71, 0.2}
+\definecolor{c109}{rgb}{0.8, 0.71, 0.2}
+\definecolor{c110}{rgb}{0.8, 0.71, 0.2}
+\definecolor{c111}{rgb}{0.8, 0.72, 0.2}
+\definecolor{c112}{rgb}{0.8, 0.72, 0.2}
+\definecolor{c113}{rgb}{0.8, 0.72, 0.2}
+\definecolor{c114}{rgb}{0.8, 0.72, 0.2}
+\definecolor{c115}{rgb}{0.8, 0.72, 0.2}
+\definecolor{c116}{rgb}{0.8, 0.73, 0.2}
+\definecolor{c117}{rgb}{0.8, 0.73, 0.2}
+\definecolor{c118}{rgb}{0.8, 0.73, 0.2}
+\definecolor{c119}{rgb}{0.8, 0.73, 0.2}
+\definecolor{c120}{rgb}{0.8, 0.73, 0.2}
+\definecolor{c121}{rgb}{0.8, 0.74, 0.2}
+\definecolor{c122}{rgb}{0.8, 0.74, 0.2}
+\definecolor{c123}{rgb}{0.8, 0.74, 0.2}
+\definecolor{c124}{rgb}{0.8, 0.74, 0.2}
+\definecolor{c125}{rgb}{0.8, 0.74, 0.2}
+\definecolor{c126}{rgb}{0.8, 0.75, 0.2}
+\definecolor{c127}{rgb}{0.8, 0.75, 0.2}
+\definecolor{c128}{rgb}{0.8, 0.75, 0.2}
+\definecolor{c129}{rgb}{0.8, 0.75, 0.2}
+\definecolor{c130}{rgb}{0.8, 0.75, 0.2}
+\definecolor{c131}{rgb}{0.8, 0.76, 0.2}
+\definecolor{c132}{rgb}{0.8, 0.76, 0.2}
+\definecolor{c133}{rgb}{0.8, 0.76, 0.2}
+\definecolor{c134}{rgb}{0.8, 0.76, 0.2}
+\definecolor{c135}{rgb}{0.8, 0.76, 0.2}
+\definecolor{c136}{rgb}{0.8, 0.77, 0.2}
+\definecolor{c137}{rgb}{0.8, 0.77, 0.2}
+\definecolor{c138}{rgb}{0.8, 0.77, 0.2}
+\definecolor{c139}{rgb}{0.8, 0.77, 0.2}
+\definecolor{c140}{rgb}{0.8, 0.77, 0.2}
+\definecolor{c141}{rgb}{0.8, 0.78, 0.2}
+\definecolor{c142}{rgb}{0.8, 0.78, 0.2}
+\definecolor{c143}{rgb}{0.8, 0.78, 0.2}
+\definecolor{c144}{rgb}{0.8, 0.78, 0.2}
+\definecolor{c145}{rgb}{0.8, 0.78, 0.2}
+\definecolor{c146}{rgb}{0.8, 0.79, 0.2}
+\definecolor{c147}{rgb}{0.8, 0.79, 0.2}
+\definecolor{c148}{rgb}{0.8, 0.79, 0.2}
+\definecolor{c149}{rgb}{0.8, 0.79, 0.2}
+\definecolor{c150}{rgb}{0.8, 0.79, 0.2}
+\definecolor{c151}{rgb}{0.8, 0.79, 0.2}
+\definecolor{c152}{rgb}{0.8, 0.8, 0.2}
+\definecolor{c153}{rgb}{0.8, 0.8, 0.2}
+\definecolor{c154}{rgb}{0.8, 0.8, 0.2}
+\definecolor{c155}{rgb}{0.8, 0.8, 0.2}
+\definecolor{c156}{rgb}{0.8, 0.8, 0.2}
+\definecolor{c157}{rgb}{0.8, 0.81, 0.2}
+\definecolor{c158}{rgb}{0.8, 0.81, 0.2}
+\definecolor{c159}{rgb}{0.8, 0.81, 0.2}
+\definecolor{c160}{rgb}{0.8, 0.81, 0.2}
+\definecolor{c161}{rgb}{0.8, 0.81, 0.2}
+\definecolor{c162}{rgb}{0.8, 0.82, 0.2}
+\definecolor{c163}{rgb}{0.8, 0.82, 0.2}
+\definecolor{c164}{rgb}{0.8, 0.82, 0.2}
+\definecolor{c165}{rgb}{0.8, 0.82, 0.2}
+\definecolor{c166}{rgb}{0.8, 0.82, 0.2}
+\definecolor{c167}{rgb}{0.8, 0.83, 0.2}
+\definecolor{c168}{rgb}{0.8, 0.83, 0.2}
+\definecolor{c169}{rgb}{0.8, 0.83, 0.2}
+\definecolor{c170}{rgb}{0.8, 0.83, 0.2}
+\definecolor{c171}{rgb}{0.8, 0.83, 0.2}
+\definecolor{c172}{rgb}{0.8, 0.84, 0.2}
+\definecolor{c173}{rgb}{0.8, 0.84, 0.2}
+\definecolor{c174}{rgb}{0.8, 0.84, 0.2}
+\definecolor{c175}{rgb}{0.8, 0.84, 0.2}
+\definecolor{c176}{rgb}{0.8, 0.84, 0.2}
+\definecolor{c177}{rgb}{0.8, 0.85, 0.2}
+\definecolor{c178}{rgb}{0.8, 0.85, 0.2}
+\definecolor{c179}{rgb}{0.8, 0.85, 0.2}
+\definecolor{c180}{rgb}{0.8, 0.85, 0.2}
+\definecolor{c181}{rgb}{0.8, 0.85, 0.2}
+\definecolor{c182}{rgb}{0.8, 0.86, 0.2}
+\definecolor{c183}{rgb}{0.8, 0.86, 0.2}
+\definecolor{c184}{rgb}{0.8, 0.86, 0.2}
+\definecolor{c185}{rgb}{0.8, 0.86, 0.2}
+\definecolor{c186}{rgb}{0.8, 0.86, 0.2}
+\definecolor{c187}{rgb}{0.8, 0.87, 0.2}
+\definecolor{c188}{rgb}{0.8, 0.87, 0.2}
+\definecolor{c189}{rgb}{0.8, 0.87, 0.2}
+\definecolor{c190}{rgb}{0.8, 0.87, 0.2}
+\definecolor{c191}{rgb}{0.8, 0.87, 0.2}
+\definecolor{c192}{rgb}{0.8, 0.88, 0.2}
+\definecolor{c193}{rgb}{0.8, 0.88, 0.2}
+\definecolor{c194}{rgb}{0.8, 0.88, 0.2}
+\definecolor{c195}{rgb}{0.8, 0.88, 0.2}
+\definecolor{c196}{rgb}{0.8, 0.88, 0.2}
+\definecolor{c197}{rgb}{0.8, 0.88, 0.2}
+\definecolor{c198}{rgb}{0.8, 0.89, 0.2}
+\definecolor{c199}{rgb}{0.8, 0.89, 0.2}
+\definecolor{c200}{rgb}{0.8, 0.89, 0.2}
+\definecolor{c201}{rgb}{0.8, 0.89, 0.2}
+\definecolor{c202}{rgb}{0.8, 0.89, 0.2}
+\definecolor{c203}{rgb}{0.8, 0.9, 0.2}
+\definecolor{c204}{rgb}{0.8, 0.9, 0.2}
+\definecolor{c205}{rgb}{0.8, 0.9, 0.2}
+\definecolor{c206}{rgb}{0.8, 0.9, 0.2}
+\definecolor{c207}{rgb}{0.8, 0.9, 0.2}
+\definecolor{c208}{rgb}{0.8, 0.91, 0.2}
+\definecolor{c209}{rgb}{0.8, 0.91, 0.2}
+\definecolor{c210}{rgb}{0.8, 0.91, 0.2}
+\definecolor{c211}{rgb}{0.8, 0.91, 0.2}
+\definecolor{c212}{rgb}{0.8, 0.91, 0.2}
+\definecolor{c213}{rgb}{0.8, 0.92, 0.2}
+\definecolor{c214}{rgb}{0.8, 0.92, 0.2}
+\definecolor{c215}{rgb}{0.8, 0.92, 0.2}
+\definecolor{c216}{rgb}{0.8, 0.92, 0.2}
+\definecolor{c217}{rgb}{0.8, 0.92, 0.2}
+\definecolor{c218}{rgb}{0.8, 0.93, 0.2}
+\definecolor{c219}{rgb}{0.8, 0.93, 0.2}
+\definecolor{c220}{rgb}{0.8, 0.93, 0.2}
+\definecolor{c221}{rgb}{0.8, 0.93, 0.2}
+\definecolor{c222}{rgb}{0.8, 0.93, 0.2}
+\definecolor{c223}{rgb}{0.8, 0.94, 0.2}
+\definecolor{c224}{rgb}{0.8, 0.94, 0.2}
+\definecolor{c225}{rgb}{0.8, 0.94, 0.2}
+\definecolor{c226}{rgb}{0.8, 0.94, 0.2}
+\definecolor{c227}{rgb}{0.8, 0.94, 0.2}
+\definecolor{c228}{rgb}{0.8, 0.95, 0.2}
+\definecolor{c229}{rgb}{0.8, 0.95, 0.2}
+\definecolor{c230}{rgb}{0.8, 0.95, 0.2}
+\definecolor{c231}{rgb}{0.8, 0.95, 0.2}
+\definecolor{c232}{rgb}{0.8, 0.95, 0.2}
+\definecolor{c233}{rgb}{0.8, 0.96, 0.2}
+\definecolor{c234}{rgb}{0.8, 0.96, 0.2}
+\definecolor{c235}{rgb}{0.8, 0.96, 0.2}
+\definecolor{c236}{rgb}{0.8, 0.96, 0.2}
+\definecolor{c237}{rgb}{0.8, 0.96, 0.2}
+\definecolor{c238}{rgb}{0.8, 0.96, 0.2}
+\definecolor{c239}{rgb}{0.8, 0.97, 0.2}
+\definecolor{c240}{rgb}{0.8, 0.97, 0.2}
+\definecolor{c241}{rgb}{0.8, 0.97, 0.2}
+\definecolor{c242}{rgb}{0.8, 0.97, 0.2}
+\definecolor{c243}{rgb}{0.8, 0.97, 0.2}
+\definecolor{c244}{rgb}{0.8, 0.98, 0.2}
+\definecolor{c245}{rgb}{0.8, 0.98, 0.2}
+\definecolor{c246}{rgb}{0.8, 0.98, 0.2}
+\definecolor{c247}{rgb}{0.8, 0.98, 0.2}
+\definecolor{c248}{rgb}{0.8, 0.98, 0.2}
+\definecolor{c249}{rgb}{0.8, 0.99, 0.2}
+\definecolor{c250}{rgb}{0.8, 0.99, 0.2}
+\definecolor{c251}{rgb}{0.8, 0.99, 0.2}
+\definecolor{c252}{rgb}{0.8, 0.99, 0.2}
+\definecolor{c253}{rgb}{0.8, 0.99, 0.2}
+\definecolor{c254}{rgb}{0.8, 1.0, 0.2}
+\definecolor{c255}{rgb}{0.8, 1.0, 0.2}
+\definecolor{c256}{rgb}{0.8, 1.0, 0.2}
 \begin{document}
 \begin{tikzpicture}
 \clip (0,0) rectangle (6,6);
-\Vertex[x=4.962,y=0.521,color=c8,opacity=0.9,label=1]{1}
-\Vertex[x=3.079,y=0.350,color=c0,opacity=0.9,label=2]{2}
-\Vertex[x=3.260,y=3.880,color=c12,opacity=0.9,label=3]{3}
-\Vertex[x=4.080,y=1.953,color=c2,opacity=0.9,label=4]{4}
-\Vertex[x=4.162,y=0.355,color=c8,opacity=0.9,label=5]{5}
-\Vertex[x=2.698,y=2.177,color=c2,opacity=0.9,label=6]{6}
-\Vertex[x=1.038,y=5.650,color=c5,opacity=0.9,label=7]{7}
-\Edge[,bend=-16.699](1)(6)
-\Edge[,bend=-16.699](1)(7)
-\Edge[,bend=-16.699](1)(5)
-\Edge[,bend=-16.699](1)(3)
-\Edge[,bend=-16.699](1)(2)
-\Edge[,bend=-16.699](2)(3)
-\Edge[,bend=-16.699](3)(7)
-\Edge[,bend=-16.699](3)(6)
-\Edge[,bend=-16.699](3)(4)
-\Edge[,bend=-16.699](3)(5)
-\Edge[,bend=-16.699](4)(7)
-\Edge[,bend=-16.699](4)(5)
-\Edge[,bend=-16.699](5)(7)
-\Edge[,bend=-16.699](5)(6)
+\Vertex[x=3.425,y=5.212,color=c64,opacity=0.95,label=N1]{1}
+\Vertex[x=4.196,y=3.761,color=c33,opacity=0.95,label=N2]{2}
+\Vertex[x=2.162,y=1.783,color=c112,opacity=0.95,label=N3]{3}
+\Vertex[x=0.963,y=3.085,color=c61,opacity=0.95,label=N4]{4}
+\Vertex[x=1.441,y=1.686,color=c58,opacity=0.95,label=N5]{5}
+\Vertex[x=0.710,y=0.350,color=c86,opacity=0.95,label=N6]{6}
+\Vertex[x=2.684,y=1.200,color=c65,opacity=0.95,label=N7]{7}
+\Vertex[x=3.680,y=5.650,color=c175,opacity=0.95,label=N8]{8}
+\Vertex[x=0.956,y=4.684,color=c85,opacity=0.95,label=N9]{9}
+\Vertex[x=2.468,y=0.673,color=c0,opacity=0.95,label=N10]{10}
+\Vertex[x=5.290,y=2.238,color=c89,opacity=0.95,label=N11]{11}
+\Vertex[x=4.772,y=4.397,color=c177,opacity=0.95,label=N12]{12}
+\Edge[,bend=-50.194](1)(11)
+\Edge[,bend=-50.194](1)(2)
+\Edge[,bend=-50.194](1)(8)
+\Edge[,bend=-50.194](1)(4)
+\Edge[,bend=-50.194](2)(11)
+\Edge[,bend=-50.194](2)(8)
+\Edge[,bend=-50.194](3)(9)
+\Edge[,bend=-50.194](3)(8)
+\Edge[,bend=-50.194](3)(4)
+\Edge[,bend=-50.194](3)(7)
+\Edge[,bend=-50.194](3)(5)
+\Edge[,bend=-50.194](3)(12)
+\Edge[,bend=-50.194](4)(12)
+\Edge[,bend=-50.194](4)(9)
+\Edge[,bend=-50.194](5)(12)
+\Edge[,bend=-50.194](5)(6)
+\Edge[,bend=-50.194](5)(8)
+\Edge[,bend=-50.194](6)(12)
+\Edge[,bend=-50.194](6)(8)
+\Edge[,bend=-50.194](6)(11)
+\Edge[,bend=-50.194](6)(9)
+\Edge[,bend=-50.194](7)(8)
+\Edge[,bend=-50.194](7)(10)
+\Edge[,bend=-50.194](7)(12)
+\Edge[,bend=-50.194](8)(11)
+\Edge[,bend=-50.194](8)(12)
+\Edge[,bend=-50.194](8)(9)
+\Edge[,bend=-50.194](9)(12)
+\Edge[,bend=-50.194](10)(12)
+\Edge[,bend=-50.194](11)(12)
 \end{tikzpicture}
 \end{document}
