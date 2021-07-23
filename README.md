@@ -10,6 +10,10 @@ En sus demos, Elisa usa `emacs` en `linux`, pero si estás en Windows,
 con haber instalado IDLE, vas a sobrevivir, con que hayas practicado
 el uso de `pip` de antemano.
 
+Hay un [playlist Los videos de las tres
+sesiones](https://youtube.com/playlist?list=PLSxaeMB7D949j-UlWnJXUlitdhCwlVFSZ)
+en YouTube.
+
 ## Primera sesión
 
 Vamos a platicar en pizarrón sobre los conceptos básicos de teoría de
